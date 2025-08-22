@@ -6,7 +6,7 @@ WhiskFlow được thiết kế để giúp bạn tự động hóa công việc
 
 #### **Bước 1: Cài Đặt và Mở Giao Diện**
 
-1.  **Cài đặt:** Thêm WhiskFlow vào trình duyệt của bạn từ Chrome Web Store.
+1.  **Cài đặt:** Thêm WhiskFlow vào trình duyệt của bạn từ [Chrome Web Store](https://chromewebstore.google.com/detail/gedfnhdibkfgacmkbjgpfjihacalnlpn).
 2.  **Mở Whisk:** Truy cập vào trang làm việc của [Whisk Project](https://labs.google/fx/vi/tools/whisk/project).
 3.  **Mở Giao Diện WhiskFlow:** Nhấp vào biểu tượng WhiskFlow trên thanh công cụ của trình duyệt để mở bảng điều khiển.
 
