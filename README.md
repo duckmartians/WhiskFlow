@@ -68,6 +68,9 @@ Các tùy chọn này áp dụng cho cả hai chế độ.
 ### **Mẹo và Thủ thuật để có Trải nghiệm Tốt nhất**
 
 * **Tắt "Hỏi vị trí lưu file":** Để tính năng tự động tải ảnh hoạt động mượt mà nhất, bạn nên vào phần cài đặt của trình duyệt (`chrome://settings/downloads`) và tắt tùy chọn **"Ask where to save each file before downloading"**.
+* **Chạy trong cửa sổ riêng:** Để tăng sự ổn định, bạn nên chạy tab Whisk và tiện ích trong một cửa sổ trình duyệt riêng, không bị ảnh hưởng bởi các tác vụ khác.
+* **Sử dụng Log:** Nếu có lỗi xảy ra, mục **"Log chi tiết"** và **"Prompt lỗi"** là những công cụ hữu ích nhất để bạn tìm ra nguyên nhân.
+* **Lỗi không click được icon:** Icon của tiện ích chỉ có thể được nhấn khi bạn đang truy cập vào một trang của Google Labs (`labs.google`). Nếu bạn đang ở trang khác, icon sẽ bị mờ đi.
 ***
 ## **WhiskFlow User Guide**
 
@@ -141,6 +144,3 @@ These options apply to both modes.
 * **Run in a Separate Window:** To increase stability, you should run the Whisk tab and the extension in a separate browser window, free from the interference of other tasks.
 * **Use the Logs:** If an error occurs, the **"Detailed Log"** and **"Failed Prompts"** sections are the most useful tools for diagnosing the cause.
 * **Extension Icon is Unclickable?:** The extension's icon can only be clicked when you are on a Google Labs page (`labs.google`). If you are on another website, the icon will be grayed out.
-* **Chạy trong cửa sổ riêng:** Để tăng sự ổn định, bạn nên chạy tab Whisk và tiện ích trong một cửa sổ trình duyệt riêng, không bị ảnh hưởng bởi các tác vụ khác.
-* **Sử dụng Log:** Nếu có lỗi xảy ra, mục **"Log chi tiết"** và **"Prompt lỗi"** là những công cụ hữu ích nhất để bạn tìm ra nguyên nhân.
-* **Lỗi không click được icon:** Icon của tiện ích chỉ có thể được nhấn khi bạn đang truy cập vào một trang của Google Labs (`labs.google`). Nếu bạn đang ở trang khác, icon sẽ bị mờ đi.
