@@ -1,77 +1,146 @@
-### **Hướng Dẫn Sử Dụng WhiskFlow Chi Tiết**
-*Cập nhật lần cuối: 23 tháng 8, 2025*
 
-WhiskFlow được thiết kế để giúp bạn tự động hóa công việc trên Whisk một cách thông minh và linh hoạt nhất. Hãy làm theo các bước dưới đây để tận dụng tối đa sức mạnh của công cụ này.
+## **Hướng dẫn Sử dụng WhiskFlow**
 
----
+### **Giới thiệu**
 
-#### **Bước 1: Cài Đặt & Khởi Động**
+**WhiskFlow** là một tiện ích mở rộng cho trình duyệt Chrome, được thiết kế để tự động hóa hoàn toàn quy trình làm việc với công cụ tạo ảnh Whisk của Google. Thay vì phải sao chép và dán thủ công từng prompt, WhiskFlow cho phép bạn xử lý hàng trăm prompt một cách tự động, giúp bạn tiết kiệm thời gian và giải phóng sức sáng tạo.
 
-1.  **Cài đặt:** Cài đặt tiện ích **[WhiskFlow](https://chromewebstore.google.com/detail/gedfnhdibkfgacmkbjgpfjihacalnlpn)** vào trình duyệt của bạn.
-2.  **Mở Whisk:** Truy cập vào trang làm việc của **[Whisk Project](https://labs.google/fx/vi/tools/whisk/project)**.
-3.  **Mở Giao Diện WhiskFlow:** Nhấp vào biểu tượng WhiskFlow trên thanh công cụ của trình duyệt để mở bảng điều khiển.
-
-    > **Lưu ý:** WhiskFlow chỉ hoạt động khi bạn đang mở đúng trang Whisk. Nếu bạn ở trang khác, một giao diện chặn sẽ hiện ra để hướng bạn chuyển đến trang làm việc.
+Tiện ích này lý tưởng cho các nghệ sĩ, nhà thiết kế, và bất kỳ ai cần tạo ra số lượng lớn hình ảnh để thử nghiệm ý tưởng hoặc xây dựng dữ liệu.
 
 ---
 
-#### **Bước 2: Chuẩn Bị Danh Sách Prompt**
+### **Tổng quan Giao diện**
 
-Đây là trái tim của WhiskFlow. Bạn có hai cách để nhập danh sách các ý tưởng của mình:
 
-* **Cách 1: Dán trực tiếp:** Sao chép danh sách prompt từ bất cứ đâu (Notepad, Google Docs,...) và dán vào ô văn bản lớn có ghi "📝 Danh sách prompt". Hãy chắc chắn rằng mỗi prompt nằm trên một dòng riêng biệt.
 
-* **Cách 2: Nhập từ file:**
-    1.  Nhấp vào nút **"Nhập từ file (.txt)"**.
-    2.  Chọn một file văn bản (`.txt`) từ máy tính của bạn. Nội dung của file sẽ tự động được đưa vào ô nhập liệu.
-    3.  Sau khi nhập thành công, **log chi tiết** sẽ hiển thị thông báo ‘Đã nhập X prompts từ file...’ để bạn biết chính xác số lượng.
+Giao diện của WhiskFlow được chia thành các khu vực chính:
 
----
-
-#### **Bước 3: Tinh Chỉnh Cài Đặt (Phần Quan Trọng Nhất)**
-
-Giao diện cài đặt được thiết kế lại gọn gàng và chia thành hai nhóm chính để bạn dễ dàng tùy chỉnh.
-
-##### **Cài đặt Tác vụ**
-Đây là các tùy chọn ảnh hưởng trực tiếp đến quy trình chạy.
-
-* **Thời gian chờ ngẫu nhiên (giây):**
-    * **Công dụng:** Đây là nâng cấp mạnh mẽ nhất giúp tool hoạt động "giống người" hơn. Thay vì một số cố định, bạn cung cấp một **khoảng** thời gian (ví dụ: từ `5` đến `15` giây). Tool sẽ chọn ngẫu nhiên một con số trong khoảng này để làm thời gian chờ sau khi gặp lỗi hoặc khi chờ tải ảnh.
-    * **Khuyến nghị:** Giữ khoảng thời gian tối thiểu từ `5` giây trở lên để đảm bảo an toàn, tránh bị Whisk phát hiện.
-
-* **Thực thi mỗi prompt:**
-    * **Công dụng:** Tính năng mới cho phép bạn chạy mỗi prompt nhiều lần trước khi chuyển sang prompt tiếp theo.
-    * **Ví dụ:** Điền số `2`, tool sẽ chạy prompt 1 hai lần, sau đó mới chuyển sang chạy prompt 2 hai lần, và cứ thế tiếp tục.
-
-* **Bắt đầu từ prompt:**
-    * **Công dụng:** Nếu bạn muốn bỏ qua một vài prompt đầu tiên hoặc muốn tiếp tục một phiên làm việc bị dừng trước đó, hãy điền số thứ tự của prompt bạn muốn bắt đầu vào đây.
-    * **Ví dụ:** Điền số `5`, WhiskFlow sẽ bắt đầu chạy từ prompt thứ 5 trong danh sách của bạn.
-
-##### **Cài đặt Chung**
-Đây là các tùy chọn về hành vi chung của công cụ.
-
-* **Tự động tải ảnh:**
-    * **Công dụng:** Khi tùy chọn này được bật, WhiskFlow sẽ tự động nhấp vào nút tải xuống ngay khi mỗi hình ảnh được tạo xong.
-    * **⚠️ Yêu cầu quan trọng:** Để tính năng này hoạt động mượt mà, bạn nên vào phần Cài đặt của trình duyệt và **tắt tùy chọn "Hỏi vị trí lưu file trước khi tải về"**. Nếu không, trình duyệt sẽ hiện một hộp thoại hỏi lưu file mỗi lần tải ảnh, làm gián đoạn quá trình tự động.
-
-* **Ngôn ngữ (Language):** Lựa chọn giao diện hiển thị là Tiếng Việt hoặc Tiếng Anh.
+1.  **📝 Danh sách prompt:** Nơi bạn nhập hoặc dán danh sách các prompt cần chạy. Bạn cũng có thể nhập từ file `.txt`.
+2.  **Các nút điều khiển chính:**
+    * `▶️ Bắt đầu / Tiếp tục`: Bắt đầu quy trình hoặc tiếp tục sau khi tạm dừng.
+    * `⏸️ Tạm dừng`: Tạm ngưng quy trình đang chạy.
+    * `⏹️ Dừng`: Chấm dứt hoàn toàn quy trình.
+3.  **Khu vực Trạng thái:**
+    * **Thanh tiến trình:** Hiển thị tiến độ tổng thể của tác vụ.
+    * **Trạng thái trực tiếp:** Hiển thị hành động đang được thực hiện (ví dụ: "Đang xử lý prompt 5/100...").
+4.  **Các mục chi tiết:**
+    * `⚙️ Cài đặt`: Nơi tùy chỉnh tất cả các thông số cho phiên làm việc.
+    * `📄 Log chi tiết`: Ghi lại nhật ký từng bước của quá trình tự động hóa, giúp bạn dễ dàng theo dõi.
+    * `⚠️ Prompt lỗi`: Liệt kê các prompt không thực thi thành công để bạn có thể sao chép và kiểm tra lại.
 
 ---
 
-#### **Bước 4: Bắt Đầu & Theo Dõi Tiến Trình**
+### **Hướng dẫn Bắt đầu Nhanh (3 Bước)**
 
-1.  **Bắt đầu:** Sau khi đã thiết lập xong, nhấp vào nút **"▶️ Bắt đầu"**.
-2.  **Theo dõi:**
-    * **Thanh tiến trình:** Cho bạn biết tổng quan về tiến độ công việc đã hoàn thành.
-    * **Trạng thái trực tiếp:** Hiển thị chính xác hành động hiện tại, ví dụ: ‘Đang xử lý prompt 1/50 (Lần 2/2)...’ hoặc "Đã tạm dừng".
-    * **Log chi tiết:** Cung cấp nhật ký đầy đủ về tất cả các hành động đã diễn ra, kèm theo thời gian thực.
-3.  **Điều khiển:**
-    * **Tạm dừng/Tiếp tục:** Trong lúc chạy, nút "Bắt đầu" sẽ chuyển thành **"⏸️ Tạm dừng"**. Bạn có thể nhấp để tạm ngưng và sau đó nhấp **"▶️ Tiếp tục"** để chạy lại.
-    * **Dừng hẳn:** Nhấp vào nút **"⏹️ Dừng"** để kết thúc hoàn toàn phiên làm việc.
+1.  **Chuẩn bị:** Mở trang làm việc của **Google Whisk** (`https://labs.google/fx/vi/tools/whisk`). Chuẩn bị sẵn danh sách prompt của bạn (mỗi prompt một dòng).
+2.  **Cài đặt:** Mở tiện ích WhiskFlow, dán danh sách prompt vào ô **"Danh sách prompt"**. Mở mục **"Cài đặt"** và chọn chế độ bạn muốn.
+3.  **Chạy:** Nhấn nút `▶️ Bắt đầu` và để WhiskFlow tự động làm việc!
 
 ---
 
-#### **Bước 5: Xem Lại và Xử Lý Lỗi**
+### **Giải thích Chi tiết các Tính năng Cài đặt**
 
-* Trong mục **"⚠️ Prompt lỗi"**, WhiskFlow sẽ liệt kê tất cả các prompt không thể tạo được hình ảnh trong phiên làm việc.
-* Sau khi phiên làm việc kết thúc, bạn có thể nhấp vào nút **"Sao chép các prompt lỗi"** để lưu lại danh sách này, sửa đổi và chạy lại chúng trong một phiên mới.
+WhiskFlow cung cấp hai chế độ hoạt động chính, mỗi chế độ có tùy chỉnh riêng để phù hợp với nhu-cầu của bạn.
+
+#### **Cài đặt Chế độ Siêu nhanh**
+
+Đây là chế độ được thiết kế cho tốc độ tối đa, hoạt động như một cuộc chạy nước rút.
+* **Khi nào nên dùng?** Khi bạn cần thử nghiệm nhanh hàng loạt ý tưởng, tạo dữ liệu thô, hoặc không có nhu cầu tải ảnh về ngay lập tức.
+* **Bật chế độ siêu nhanh:** Tích vào ô này để kích hoạt. Khi bật, **tính năng tự động tải ảnh sẽ bị vô hiệu hóa**.
+* **Thời gian chờ (giây):** Đây là khoảng thời gian (tính bằng giây) mà tool sẽ chờ sau khi gửi một prompt trước khi gửi prompt tiếp theo. Thời gian này đã bao gồm cả việc kiểm tra lỗi.
+
+#### **Cài đặt Chế độ Thường**
+
+Đây là chế độ ổn định, được thiết kế cho các phiên làm việc cần độ tin cậy và lưu trữ kết quả, hoạt động như một cuộc chạy marathon.
+* **Khi nào nên dùng?** Khi bạn muốn chạy một danh sách prompt dài và cần tất cả các ảnh được tự động tải về máy.
+* **Thời gian chờ ngẫu nhiên (giây):** Để mô phỏng hành vi của người dùng và tăng tính ổn định, tool sẽ chờ một khoảng thời gian ngẫu nhiên giữa hai giá trị bạn đặt (tối thiểu và tối đa) trước khi xử lý prompt tiếp theo.
+* **Tự động tải ảnh:** Tích vào ô này để WhiskFlow tự động nhấn nút tải về mỗi khi ảnh được tạo xong.
+
+#### **Cài đặt Chung**
+
+Các tùy chọn này áp dụng cho cả hai chế độ.
+* **Thực thi mỗi prompt:** Cho phép bạn chạy mỗi prompt nhiều hơn một lần. Ví dụ, nếu bạn đặt là `3`, mỗi prompt trong danh sách sẽ được chạy lặp lại 3 lần trước khi chuyển sang prompt tiếp theo. Rất hữu ích để khám phá các biến thể của cùng một ý tưởng.
+* **Bắt đầu từ prompt:** Nếu quy trình bị lỗi hoặc bạn muốn chạy lại từ một vị trí cụ thể, hãy điền số thứ tự của prompt bạn muốn bắt đầu.
+* **Ngôn ngữ (Language):** Chuyển đổi giao diện giữa Tiếng Việt và Tiếng Anh.
+
+---
+
+### **Mẹo và Thủ thuật để có Trải nghiệm Tốt nhất**
+
+* **Tắt "Hỏi vị trí lưu file":** Để tính năng tự động tải ảnh hoạt động mượt mà nhất, bạn nên vào phần cài đặt của trình duyệt (`chrome://settings/downloads`) và tắt tùy chọn **"Ask where to save each file before downloading"**.
+***
+## **WhiskFlow User Guide**
+
+### **Introduction**
+
+**WhiskFlow** is a Chrome browser extension designed to fully automate your workflow with Google's Whisk image generation tool. Instead of manually copying and pasting every single prompt, WhiskFlow allows you to process hundreds of prompts automatically, helping you save time and unleash your creativity.
+
+This extension is ideal for artists, designers, and anyone who needs to generate a large number of images for testing ideas or building datasets.
+
+---
+
+### **Interface Overview**
+
+
+
+The WhiskFlow interface is divided into several main areas:
+
+1.  **📝 Prompt List:** Where you type or paste the list of prompts to be processed. You can also import from a `.txt` file.
+2.  **Main Control Buttons:**
+    * `▶️ Start / Resume`: Begins the process or resumes after pausing.
+    * `⏸️ Pause`: Pauses the currently running process.
+    * `⏹️ Stop`: Completely terminates the process.
+3.  **Status Area:**
+    * **Progress Bar:** Displays the overall progress of the task.
+    * **Live Status:** Shows the action currently being performed (e.g., "Processing prompt 5/100...").
+4.  **Details Sections:**
+    * `⚙️ Settings`: Where you customize all parameters for your session.
+    * `📄 Detailed Log`: Records a step-by-step log of the automation process, making it easy to track.
+    * `⚠️ Failed Prompts`: Lists any prompts that failed to execute, allowing you to copy and review them.
+
+---
+
+### **Quick Start Guide (3 Steps)**
+
+1.  **Prepare:** Open a **Google Whisk** project page (`https://labs.google/..../whisk`). Have your list of prompts ready (one prompt per line).
+2.  **Setup:** Open the WhiskFlow extension, paste your prompt list into the **"Prompt List"** text area. Open the **"Settings"** section and choose your desired mode.
+3.  **Run:** Click the `▶️ Start` button and let WhiskFlow do the work for you!
+
+---
+
+### **Detailed Explanation of Settings**
+
+WhiskFlow offers two main operating modes, each with its own customizations to fit your needs.
+
+#### **Super-Fast Mode Settings**
+
+This mode is designed for maximum speed, like a sprint.
+* **When to use it?** When you need to rapidly test batches of ideas, generate raw data, or do not need to download the images immediately.
+* **Enable Super-Fast Mode:** Check this box to activate. When enabled, the **auto-download feature will be disabled**.
+* **Wait Time (s):** This is the amount of time (in seconds) the tool will wait after submitting one prompt before sending the next one. This duration includes the time for error checking.
+
+#### **Normal Mode Settings**
+
+This is the stable mode, designed for sessions that require reliability and saved results, like a marathon.
+* **When to use it?** When you want to run a long list of prompts and need all the generated images to be automatically downloaded to your computer.
+* **Random wait time (s):** To simulate human behavior and increase stability, the tool will wait for a random duration between the two values you set (min and max) before processing the next prompt.
+* **Auto-download images:** Check this box to have WhiskFlow automatically click the download button as soon as an image is generated.
+
+#### **General Settings**
+
+These options apply to both modes.
+* **Runs per prompt:** Allows you to execute each prompt more than once. For example, if you set it to `3`, each prompt in your list will be run 3 times before moving to the next one. This is very useful for exploring variations of the same idea.
+* **Start from prompt:** If the process fails or you want to restart from a specific point, enter the number of the prompt you wish to begin with.
+* **Language:** Switch the interface between Vietnamese and English.
+
+---
+
+### **Tips and Tricks for the Best Experience**
+
+* **Disable "Ask where to save...":** For the auto-download feature to work seamlessly, it's highly recommended to go into your browser's settings (`chrome://settings/downloads`) and turn off the option **"Ask where to save each file before downloading"**.
+* **Run in a Separate Window:** To increase stability, you should run the Whisk tab and the extension in a separate browser window, free from the interference of other tasks.
+* **Use the Logs:** If an error occurs, the **"Detailed Log"** and **"Failed Prompts"** sections are the most useful tools for diagnosing the cause.
+* **Extension Icon is Unclickable?:** The extension's icon can only be clicked when you are on a Google Labs page (`labs.google`). If you are on another website, the icon will be grayed out.
+* **Chạy trong cửa sổ riêng:** Để tăng sự ổn định, bạn nên chạy tab Whisk và tiện ích trong một cửa sổ trình duyệt riêng, không bị ảnh hưởng bởi các tác vụ khác.
+* **Sử dụng Log:** Nếu có lỗi xảy ra, mục **"Log chi tiết"** và **"Prompt lỗi"** là những công cụ hữu ích nhất để bạn tìm ra nguyên nhân.
+* **Lỗi không click được icon:** Icon của tiện ích chỉ có thể được nhấn khi bạn đang truy cập vào một trang của Google Labs (`labs.google`). Nếu bạn đang ở trang khác, icon sẽ bị mờ đi.
