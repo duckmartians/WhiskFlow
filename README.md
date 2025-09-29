@@ -23,7 +23,7 @@ Công cụ này giúp bạn tiết kiệm hàng giờ làm việc thủ công, c
 
 Bạn có thể cài đặt tiện ích một cách dễ dàng từ Cửa hàng Chrome trực tuyến:
 
-[**Cài đặt Auto Flow**](https://www.google.com/search?q=https://chromewebstore.google.com/detail/auto-flow-prompt-automat/gedfnhdibkfgacmkbjgpfjihacalnlpn)
+[**Cài đặt Auto Flow**](https://chromewebstore.google.com/detail/auto-flow-prompt-automati/lhcmnhdbddgagibbbgppakocflbnknoa)
 
 ## 📖 Hướng dẫn sử dụng
 
